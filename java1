@@ -1,0 +1,38 @@
+package input;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Practise7 {
+	public static void main(String[]args) {
+		Scanner scn= new Scanner(System.in);
+		
+		int[] marks = new int[10];
+		for(int count=0;count<marks.length;count++) {
+			System.out.println("Enter the number");
+			marks[count]=scn.nextInt();
+			
+		}
+		Arrays.sort(marks);
+		System.out.println("Min mark: "+marks[0]);
+		System.out.println("Max mark: "+marks[9]);
+		
+		int total=0;
+		double avg;
+		String FinalGrade;
+		for(int element:marks) {
+			total=total+element;
+			
+		}
+		avg=total/10;
+		
+		if(avg>=60) {
+			FinalGrade="D";
+		}else if(avg>=40) {
+			FinalGrade="p";
+		}else {
+			FinalGrade="F";
+		}
+		System.out.println("Final Grade is: "+FinalGrade);
+	}
+
+}
